@@ -20,3 +20,4 @@ const Homepage = () => (
     </p>
   </>
 )
+export default Homepage
