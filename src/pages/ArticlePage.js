@@ -1,8 +1,11 @@
 import React from 'react'
 
-const ArticlePage = () => (
-  <>
-    <h1>This is an Article</h1>
-  </>
-)
+const ArticlePage = ({ match }) => {
+  const name = match.params.name
+  return (
+    <>
+      <h1>This is the {name} article</h1>
+    </>
+  )
+}
 export default ArticlePage
