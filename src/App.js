@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
-import Homepage from './Components/Homepage'
-import About from './Components/About'
-import ArticlePage from './Components/ArticlePage'
-import ArticlesList from './Components/ArticlesList'
+import Homepage from './pages/Homepage'
+import About from './pages/About'
+import ArticlePage from './pages/ArticlePage'
+import ArticlesList from './pages/ArticlesList'
 
 function App () {
   return (
