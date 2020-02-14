@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ArticlesList from "../Components/ArticlesList";
+import CommentsList from "../Components/CommentsList";
+import UpvotesSection from "../Components/UpvotesSection";
 import NotFoundPage from "./NotFoundPage";
 import articleContent from "./article-content";
 
@@ -34,10 +36,15 @@ const ArticlePage = ({ match }) => {
 	return (
 		<>
 			<h1>{article.title}</h1>
-			<p>This post has been upvoted {articleInfo.upvotes} times</p>
+			<UpvotesSection
+				articleName={articleInfo.name}
+				upvotes={articleInfo.upvotes}
+				setArticleInfo={setArticleInfo}
+			/>
 			{article.content.map((paragraph, key) => (
 				<p key={key}>{paragraph}</p>
 			))}
+			<CommentsList comments={articleInfo.comments} />
 			<h3>Other Articles:</h3>
 			<ArticlesList articles={otherArticles} />
 		</>
